@@ -7,7 +7,7 @@ CREATE DATABASE IF NOT EXISTS db_food_delivery_app DEFAULT CHARACTER SET utf8mb4
 -- to check if the database was created 
 SHOW DATABASES;
 
--- to make the db_food_delivery-app database the active database 
+-- activating database
 USE db_food_delivery_app;
 
 -- Table: Users
@@ -33,7 +33,6 @@ CREATE TABLE IF NOT EXISTS Restaurants (
     IsActive BOOLEAN DEFAULT TRUE
 );
 
-
 -- Table: MenuItems
 CREATE TABLE IF NOT EXISTS MenuItems (
     MenuItemID INT PRIMARY KEY AUTO_INCREMENT,
@@ -47,7 +46,6 @@ CREATE TABLE IF NOT EXISTS MenuItems (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
-
 
 -- Table: Orders
 CREATE TABLE IF NOT EXISTS  Orders (
@@ -66,6 +64,7 @@ CREATE TABLE IF NOT EXISTS  Orders (
 );
 
 
+
 -- Table: OrderItems
 CREATE TABLE IF NOT EXISTS OrderItems (
     OrderItemID INT PRIMARY KEY AUTO_INCREMENT,
@@ -79,3 +78,4 @@ CREATE TABLE IF NOT EXISTS OrderItems (
         ON DELETE SET NULL
         ON UPDATE CASCADE
 );
+
